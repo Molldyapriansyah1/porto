@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molldy Apriansyah | Technical Artist & Software Developer</title>
+    <meta name="description" content="Portfolio of Molldy Apriansyah, a Software and Game Developer specializing in Frontend development, UI/UX, and game assets creation.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Interactive Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Scanning Overlay Lines -->
+    <div class="scanlines"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-accent">M.A</span>
+            <span class="logo-divider">//</span>
+            <span class="logo-text">TECH_ARTIST.sys</span>
+        </div>
+        <nav class="nav">
+            <a href="#about" class="nav-link active" id="nav-about">ABOUT</a>
+            <a href="#experience" class="nav-link" id="nav-experience">EXPERIENCE</a>
+            <a href="#skills" class="nav-link" id="nav-skills">SKILLS</a>
+            <a href="#achievements" class="nav-link" id="nav-achievements">ACHIEVEMENTS</a>
+            <a href="#contact" class="nav-link btn-contact" id="nav-contact">CONTACT</a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- SECTION: HERO & ABOUT -->
+        <section id="about" class="section hero-section">
+            <div class="hero-grid">
+                <!-- Visual Panel: Avatar & Tech telemetry -->
+                <div class="hero-visual-panel">
+                    <div class="avatar-container">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-ring"></div>
+                        <img src="avatar.png" alt="Molldy Apriansyah" class="avatar-img">
+                        <div class="telemetry-tag top-left">LOC: BOGOR_ID</div>
+                        <div class="telemetry-tag bottom-right">VER: 2026.06</div>
+                    </div>
+                    <div class="telemetry-data">
+                        <div class="telemetry-line">
+                            <span class="lbl">STATUS:</span> <span class="val green-glow">ACTIVE_READY</span>
+                        </div>
+                        <div class="telemetry-line">
+                            <span class="lbl">FOCUS:</span> <span class="val">UI_UX.pkg / GAME_DEV.bin</span>
+                        </div>
+                        <div class="telemetry-line">
+                            <span class="lbl">FPS:</span> <span class="val" id="fps-counter">60.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Panel: Intro & Summary -->
+                <div class="hero-text-panel">
+                    <span class="subtitle-badge">INITIALIZING EXPERIENCE...</span>
+                    <h1 class="hero-title">MOLLDY<br><span class="accent-text">APRIANSYAH</span></h1>
+                    <p class="hero-summary">
+                        Fresh graduate in <strong>Software and Game Development (PPLG)</strong> from SMK Wikrama Bogor with a strong lean toward design. Focused on frontend development and UI/UX—translating visual ideas into clean, functional interfaces using React, Vite, and Tailwind CSS. Proficient in Figma and Adobe Photoshop for design.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>GET IN TOUCH</span>
+                            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="mailto:molldyapriansyah23@gmail.com" class="btn btn-secondary">
+                            <span>COPY EMAIL</span>
+                            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: EXPERIENCE -->
+        <section id="experience" class="section experience-section">
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2 class="section-title">WORK_LOGS</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-core"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title">Technical Artist</h3>
+                                <span class="company-name">CV. Gingersun</span>
+                            </div>
+                            <span class="date-badge">Jan 2025 - June 2025</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Designed high-fidelity UI/UX interfaces for Roblox game projects, prioritizing visual clarity, dynamic asset scaling, and intuitive user experiences.</li>
+                            <li>Implemented UI designs directly into Roblox Studio environments, bridging the gap between flat visual concepts and interactive in-game interfaces.</li>
+                            <li>Contributed to the overall artistic and visual direction of interactive game assets in collaboration with cross-functional development teams.</li>
+                        </ul>
+                        <div class="card-footer-tags">
+                            <span class="tag">Roblox Studio</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Asset Creation</span>
+                            <span class="tag">Lua</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: SKILLS (TOOLBOX) -->
+        <section id="skills" class="section skills-section">
+            <div class="toolbox-header-card glass-card">
+                <div class="toolbox-left">
+                    <span class="toolbox-lbl">TOOLBOX</span>
+                    <h2 class="toolbox-title">Tools I work with</h2>
+                </div>
+                <div class="toolbox-right">
+                    <p class="toolbox-desc">From frontend shipping to backend workflows and game experiments, these are the tools I keep reaching for.</p>
+                </div>
+            </div>
+
+            <div class="toolbox-marquee-container">
+                <!-- Row 1: Left to Right -->
+                <div class="marquee-row marquee-left">
+                    <div class="marquee-content">
+                        <!-- Group 1 -->
+                        <span class="pill-tag"><span class="pill-dot lang-js"></span>JavaScript</span>
+                        <span class="pill-tag"><span class="pill-dot fw-react"></span>React JS</span>
+                        <span class="pill-tag"><span class="pill-dot tl-figma"></span>Figma</span>
+                        <span class="pill-tag"><span class="pill-dot tl-unity"></span>Unity</span>
+                        <span class="pill-tag"><span class="pill-dot db-mysql"></span>MySQL</span>
+                        <span class="pill-tag"><span class="pill-dot fw-tw"></span>Tailwind CSS</span>
+                        <span class="pill-tag"><span class="pill-dot tl-git"></span>Git</span>
+                        <span class="pill-tag"><span class="pill-dot lang-lua"></span>Lua</span>
+                        <span class="pill-tag"><span class="pill-dot fw-vite"></span>Vite</span>
+                        <!-- Group 2 (Duplicate for infinite loop) -->
+                        <span class="pill-tag"><span class="pill-dot lang-js"></span>JavaScript</span>
+                        <span class="pill-tag"><span class="pill-dot fw-react"></span>React JS</span>
+                        <span class="pill-tag"><span class="pill-dot tl-figma"></span>Figma</span>
+                        <span class="pill-tag"><span class="pill-dot tl-unity"></span>Unity</span>
+                        <span class="pill-tag"><span class="pill-dot db-mysql"></span>MySQL</span>
+                        <span class="pill-tag"><span class="pill-dot fw-tw"></span>Tailwind CSS</span>
+                        <span class="pill-tag"><span class="pill-dot tl-git"></span>Git</span>
+                        <span class="pill-tag"><span class="pill-dot lang-lua"></span>Lua</span>
+                        <span class="pill-tag"><span class="pill-dot fw-vite"></span>Vite</span>
+                    </div>
+                </div>
+
+                <!-- Row 2: Right to Left -->
+                <div class="marquee-row marquee-right">
+                    <div class="marquee-content">
+                        <!-- Group 1 -->
+                        <span class="pill-tag"><span class="pill-dot lang-cs"></span>C#</span>
+                        <span class="pill-tag"><span class="pill-dot fw-flutter"></span>Flutter</span>
+                        <span class="pill-tag"><span class="pill-dot tl-photoshop"></span>Photoshop</span>
+                        <span class="pill-tag"><span class="pill-dot db-supabase"></span>Supabase</span>
+                        <span class="pill-tag"><span class="pill-dot lang-dart"></span>Dart</span>
+                        <span class="pill-tag"><span class="pill-dot fw-laravel"></span>Laravel</span>
+                        <span class="pill-tag"><span class="pill-dot tl-postman"></span>Postman</span>
+                        <span class="pill-tag"><span class="pill-dot lang-php"></span>PHP</span>
+                        <span class="pill-tag"><span class="pill-dot db-sqlite"></span>SQLite</span>
+                        <!-- Group 2 (Duplicate for infinite loop) -->
+                        <span class="pill-tag"><span class="pill-dot lang-cs"></span>C#</span>
+                        <span class="pill-tag"><span class="pill-dot fw-flutter"></span>Flutter</span>
+                        <span class="pill-tag"><span class="pill-dot tl-photoshop"></span>Photoshop</span>
+                        <span class="pill-tag"><span class="pill-dot db-supabase"></span>Supabase</span>
+                        <span class="pill-tag"><span class="pill-dot lang-dart"></span>Dart</span>
+                        <span class="pill-tag"><span class="pill-dot fw-laravel"></span>Laravel</span>
+                        <span class="pill-tag"><span class="pill-dot tl-postman"></span>Postman</span>
+                        <span class="pill-tag"><span class="pill-dot lang-php"></span>PHP</span>
+                        <span class="pill-tag"><span class="pill-dot db-sqlite"></span>SQLite</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core grid highlighting key software with SVGs -->
+            <div class="toolbox-grid">
+                <!-- Figma -->
+                <div class="toolbox-card glass-card">
+                    <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="toolbox-icon">
+                        <path d="M19 0C29.493 0 38 8.507 38 19C38 24.161 35.952 28.847 32.639 32.25C29.236 35.563 24.55 37.611 19.389 37.611C8.896 37.611 0.389 29.104 0.389 18.611C0.389 8.118 8.896 0 19 0Z" fill="#F24E1E"/>
+                        <path d="M19 37.611C29.493 37.611 38 46.118 38 56.611C38 56.715 37.915 56.8 37.811 56.8H19C8.896 56.8 0.389 48.293 0.389 37.8C0.389 37.696 0.474 37.611 0.578 37.611H19Z" fill="#0ACF83"/>
+                        <path d="M0.389 19C0.389 9.5 7.5 1.889 17 1.889H19C28.5 1.889 35.611 9.5 35.611 19C35.611 28.5 28.5 36.111 19 36.111H17C7.5 36.111 0.389 28.5 0.389 19Z" fill="#FF7262" opacity="0.85"/>
+                    </svg>
+                </div>
+                <!-- Unity -->
+                <div class="toolbox-card glass-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toolbox-icon">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+                        <line x1="12" y1="22" x2="12" y2="12" />
+                        <line x1="12" y1="12" x2="22" y2="8.5" />
+                        <line x1="12" y1="12" x2="2" y2="8.5" />
+                        <polygon points="12 12 22 8.5 12 5 2 8.5" opacity="0.3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <!-- VS Code -->
+                <div class="toolbox-card glass-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="toolbox-icon">
+                        <path d="M22 6L14 2L2 9L7 12L2 15L14 22L22 18V6Z" />
+                        <path d="M14 2V22" />
+                        <path d="M22 6L7 12L22 18" />
+                    </svg>
+                </div>
+                <!-- React JS -->
+                <div class="toolbox-card glass-card">
+                    <svg viewBox="-11.5 -10.23174 23 20.46348" fill="none" xmlns="http://www.w3.org/2000/svg" class="toolbox-icon">
+                        <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+                        <g stroke="#61dafb" stroke-width="1" fill="none">
+                            <ellipse rx="11" ry="4.2"/>
+                            <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                            <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                        </g>
+                    </svg>
+                </div>
+                <!-- Git -->
+                <div class="toolbox-card glass-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toolbox-icon">
+                        <circle cx="12" cy="18" r="3" />
+                        <circle cx="6" cy="6" r="3" />
+                        <circle cx="18" cy="6" r="3" />
+                        <path d="M18 9v3a3 3 0 0 1-3 3H9" />
+                        <line x1="6" y1="9" x2="6" y2="15" />
+                    </svg>
+                </div>
+                <!-- MySQL -->
+                <div class="toolbox-card glass-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toolbox-icon">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ACHIEVEMENTS & EDUCATION -->
+        <section id="achievements" class="section achievements-section">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">SYSTEM_UNLOCKS</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="achievements-grid">
+                <!-- Education Card -->
+                <div class="achievement-column">
+                    <h3 class="col-title">// EDUCATION_DATA</h3>
+                    <div class="education-card glass-card">
+                        <div class="edu-header">
+                            <h4 class="school-name">SMK Wikrama Bogor</h4>
+                            <span class="edu-date">2023 - 2026</span>
+                        </div>
+                        <p class="edu-specialization">Software and Game Development (PPLG)</p>
+                        <p class="edu-details">
+                            Relevant coursework included full-stack web architectures (HTML, CSS, JS, React, Vite, Tailwind, Laravel), cross-platform app ecosystems (Flutter), UI/UX workflow logic (Figma, Photoshop), and real-time interactive game development using C# inside the Unity engine.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Badges Card -->
+                <div class="achievement-column">
+                    <h3 class="col-title">// CERTIFICATIONS_UNLOCKS</h3>
+                    <div class="badges-list">
+                        <!-- Badge Item -->
+                        <div class="badge-item glass-card">
+                            <div class="badge-icon">🏆</div>
+                            <div class="badge-details">
+                                <h4 class="badge-title">Indonesia Game Week</h4>
+                                <p class="badge-org">Peserta Aktif Badge</p>
+                            </div>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="badge-item glass-card">
+                            <div class="badge-icon">⚡</div>
+                            <div class="badge-details">
+                                <h4 class="badge-title">Unity Essentials</h4>
+                                <p class="badge-org">Unity Technologies</p>
+                            </div>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="badge-item glass-card">
+                            <div class="badge-icon">🌐</div>
+                            <div class="badge-details">
+                                <h4 class="badge-title">Belajar Dasar Pemrograman Web</h4>
+                                <p class="badge-org">Dicoding Academy</p>
+                            </div>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="badge-item glass-card">
+                            <div class="badge-icon">💼</div>
+                            <div class="badge-details">
+                                <h4 class="badge-title">Wadhwani JobReady</h4>
+                                <p class="badge-org">Wadhwani Foundation</p>
+                            </div>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="badge-item glass-card">
+                            <div class="badge-icon">👾</div>
+                            <div class="badge-details">
+                                <h4 class="badge-title">Global Game Jam</h4>
+                                <p class="badge-org">GGJ by Gadas Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CONTACT -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">COMMUNICATION_LINK</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info Panel -->
+                <div class="contact-info-panel glass-card">
+                    <h3 class="panel-subtitle">GET IN TOUCH</h3>
+                    <p class="panel-desc">
+                        Have a design system, a Roblox game project, a React interface, or an exciting game asset layout you need executed? Let's connect and build something spectacular.
+                    </p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:molldyapriansyah23@gmail.com" class="contact-method-card">
+                            <div class="method-icon">✉️</div>
+                            <div class="method-text">
+                                <span class="method-label">EMAIL_LINK</span>
+                                <span class="method-value">molldyapriansyah23@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:085179911428" class="contact-method-card">
+                            <div class="method-icon">📞</div>
+                            <div class="method-text">
+                                <span class="method-label">PHONE_LINK</span>
+                                <span class="method-value">0851-7991-1428</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/molldy-apriansyah-007336333b" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                            <div class="method-icon">🔗</div>
+                            <div class="method-text">
+                                <span class="method-label">LINKEDIN_LINK</span>
+                                <span class="method-value">linkedin.com/in/molldy-apriansyah</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Message Form -->
+                <div class="contact-form-panel glass-card">
+                    <form id="contact-form" onsubmit="event.preventDefault(); alert('Message transmission protocol initialized successfully!');">
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">VISITOR_NAME</label>
+                            <input type="text" id="form-name" class="form-input" placeholder="e.g. Jean Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">RETURN_ADDRESS (EMAIL)</label>
+                            <input type="email" id="form-email" class="form-input" placeholder="e.g. name@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-msg" class="form-label">TRANSMISSION_DATA</label>
+                            <textarea id="form-msg" class="form-input form-textarea" placeholder="Type your message details here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>INITIALIZE SEND</span>
+                            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-copy">&copy; 2026 Molldy Apriansyah. Built under high visual fidelity protocol. All rights reserved.</p>
+        <p class="footer-telemetry">COORD: [3.48S, 106.84E] | STATUS: ONLINE</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
