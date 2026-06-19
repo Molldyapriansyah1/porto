@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initScrollObserver();
     initTelemetryStats();
-    initEmailClipboard();
 });
 
 /* 2. MOBILE MENU DRAWER TOGGLER */
@@ -66,32 +65,4 @@ function initTelemetryStats() {
         const val = (59.85 + Math.random() * 0.3).toFixed(2);
         fpsCounter.textContent = val;
     }, 800);
-}
-
-/* 6. COPY EMAIL ACTION */
-function initEmailClipboard() {
-    const copyBtn = document.querySelector('.btn-secondary');
-    if (!copyBtn) return;
-    
-    copyBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        const email = 'molldyapriansyah23@gmail.com';
-        navigator.clipboard.writeText(email).then(() => {
-            const spanText = copyBtn.querySelector('span');
-            const originalText = spanText.textContent;
-            
-            spanText.textContent = 'COPIED!';
-            copyBtn.style.borderColor = '#10b981';
-            copyBtn.style.color = '#10b981';
-            
-            setTimeout(() => {
-                spanText.textContent = originalText;
-                copyBtn.style.borderColor = '';
-                copyBtn.style.color = '';
-            }, 2000);
-        }).catch(err => {
-            console.error('Could not copy email address: ', err);
-        });
-    });
 }
