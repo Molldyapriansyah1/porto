@@ -58,48 +58,7 @@ body {
     background: var(--accent);
 }
 
-/* BACKGROUND CANVAS & GRID OVERLAYS */
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -2;
-    pointer-events: none;
-}
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        linear-gradient(rgba(18, 18, 30, 0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(18, 18, 30, 0.4) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Scanlines visual effect */
-.scanlines {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(18, 16, 16, 0) 50%, 
-        rgba(0, 0, 0, 0.12) 50%
-    );
-    background-size: 100% 4px;
-    z-index: 1000;
-    pointer-events: none;
-    opacity: 0.4;
-}
 
 /* REUSABLE GLASSMOPHISM CARD SYSTEM */
 .glass-card {
@@ -752,32 +711,13 @@ body::before {
     transform: translateY(-2px);
 }
 
-.pill-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--text-muted);
+.pill-logo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
 }
-
-/* Dot Color Matches */
-.pill-dot.lang-js { background: #f7df1e; }
-.pill-dot.lang-lua { background: #000080; }
-.pill-dot.lang-cs { background: #178600; }
-.pill-dot.lang-dart { background: #00b4ab; }
-.pill-dot.lang-php { background: #4f5b93; }
-.pill-dot.fw-react { background: #61dafb; }
-.pill-dot.fw-vite { background: #646cff; }
-.pill-dot.fw-tw { background: #38bdf8; }
-.pill-dot.fw-flutter { background: #02569b; }
-.pill-dot.fw-laravel { background: #ff2d20; }
-.pill-dot.tl-figma { background: #f24e1e; }
-.pill-dot.tl-unity { background: #dddddd; }
-.pill-dot.tl-photoshop { background: #31a8ff; }
-.pill-dot.tl-git { background: #f05032; }
-.pill-dot.tl-postman { background: #ff6c37; }
-.pill-dot.db-mysql { background: #00758f; }
-.pill-dot.db-supabase { background: #3ecf8e; }
-.pill-dot.db-sqlite { background: #0f172a; }
 
 /* TOOLBOX GRID */
 .toolbox-grid {
@@ -788,11 +728,26 @@ body::before {
 }
 
 .toolbox-card {
-    height: 100px;
+    height: 110px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    gap: 10px;
+    padding: 16px 20px;
+}
+
+.toolbox-name {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.toolbox-card:hover .toolbox-name {
+    color: var(--accent);
 }
 
 .toolbox-icon {

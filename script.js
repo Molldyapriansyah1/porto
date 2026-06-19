@@ -1,90 +1,11 @@
 // MAIN INTERACTIVE JAVASCRIPT
 
 document.addEventListener('DOMContentLoaded', () => {
-    initCanvas();
     initMobileMenu();
     initScrollObserver();
     initTelemetryStats();
     initEmailClipboard();
 });
-
-/* 1. BACKGROUND CANVAS PARTICLES GRID */
-function initCanvas() {
-    const canvas = document.getElementById('bg-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-    
-    const particles = [];
-    const maxParticles = 40;
-    
-    class Particle {
-        constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.4;
-            this.vy = (Math.random() - 0.5) * 0.4;
-            this.radius = Math.random() * 2 + 1;
-        }
-        
-        update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
-        }
-        
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(6, 182, 212, 0.15)'; // Accent color opacity
-            ctx.fill();
-        }
-    }
-    
-    // Instantiate particles
-    for (let i = 0; i < maxParticles; i++) {
-        particles.push(new Particle());
-    }
-    
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
-        
-        // Draw connections
-        ctx.strokeStyle = 'rgba(99, 102, 241, 0.04)'; // Indigo link lines
-        ctx.lineWidth = 1;
-        
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-            
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                
-                if (dist < 150) {
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.stroke();
-                }
-            }
-        }
-        
-        requestAnimationFrame(animate);
-    }
-    
-    animate();
-    
-    window.addEventListener('resize', () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    });
-}
 
 /* 2. MOBILE MENU DRAWER TOGGLER */
 function initMobileMenu() {
