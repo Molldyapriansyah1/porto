@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollObserver();
     initTelemetryStats();
     renderProjects();
+    initContactForm();
 });
 
 /* 1. RENDER PROJECT CARDS */
@@ -150,4 +151,66 @@ function initTelemetryStats() {
     setInterval(() => {
         fpsCounter.textContent = (59.85 + Math.random() * 0.3).toFixed(2);
     }, 800);
+}
+
+/* 5. CONTACT FORM — Web3Forms integration */
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const btn    = form.querySelector('.btn-submit');
+        const btnSpan = btn.querySelector('span');
+        const originalText = btnSpan.textContent;
+
+        // Sending state
+        btnSpan.textContent = 'TRANSMITTING...';
+        btn.disabled = true;
+        btn.style.opacity = '0.75';
+        btn.style.cursor  = 'not-allowed';
+
+        const payload = {
+            access_key: form.querySelector('[name="access_key"]').value,
+            subject:    form.querySelector('[name="subject"]').value,
+            from_name:  form.querySelector('[name="from_name"]').value,
+            botcheck:   form.querySelector('[name="botcheck"]').checked,
+            name:       document.getElementById('form-name').value.trim(),
+            email:      document.getElementById('form-email').value.trim(),
+            message:    document.getElementById('form-msg').value.trim(),
+        };
+
+        const reset = (text, color, delay = 3200) => {
+            btnSpan.textContent = text;
+            btn.style.background = color;
+            setTimeout(() => {
+                btnSpan.textContent = originalText;
+                btn.style.background = '';
+                btn.style.opacity  = '1';
+                btn.style.cursor   = 'pointer';
+                btn.disabled = false;
+            }, delay);
+        };
+
+        try {
+            const res  = await fetch('https://api.web3forms.com/submit', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body:    JSON.stringify(payload),
+            });
+            const json = await res.json();
+
+            if (json.success) {
+                form.reset();
+                reset('TRANSMISSION_COMPLETE ✓', '#10b981');
+            } else {
+                console.error('Web3Forms error:', json);
+                reset('TRANSMISSION_FAILED ✗', '#ef4444');
+            }
+        } catch (err) {
+            console.error('Network error:', err);
+            reset('CONNECTION_ERROR ✗', '#ef4444');
+        }
+    });
 }

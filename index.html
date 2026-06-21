@@ -363,7 +363,11 @@
                     </div>
                 </div>
                 <div class="contact-form-panel glass-card">
-                    <form id="contact-form" onsubmit="event.preventDefault(); alert('Message transmission protocol initialized successfully!');">
+                    <form id="contact-form">
+                        <input type="hidden" name="access_key" value="1aee621c-cf18-4212-be00-51d853356c6e">
+                        <input type="hidden" name="subject" value="Portfolio Contact — New Message">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                         <div class="form-group">
                             <label for="form-name" class="form-label">VISITOR_NAME</label>
                             <input type="text" id="form-name" class="form-input" placeholder="e.g. Jean Doe" required>
