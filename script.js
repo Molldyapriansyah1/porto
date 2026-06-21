@@ -12,26 +12,50 @@
 const PROJECTS = [
     {
         title: "Expense Tracker",
-        desc: "Full-stack personal finance app with income/expense tracking, savings flow, and dashboard analytics. Dark grunge aesthetic with SVG donut chart.",
-        thumb: null,
+        desc: "A personal finance tracker built with React. Track your income, expenses, and savings — all in one place.",
+        thumb: "assets/expense.png",
         tags: ["React", "Vite", "Supabase", "Node/Express"],
-        github: "https://github.com/Molldyapriansyah1",
-        demo: null
+        github: "https://github.com/Molldyapriansyah1/Expense",
+        demo: "https://expense-demo-eight.vercel.app"
     },
     {
         title: "Inventaris",
         desc: "Laravel 12 inventory management system with Admin/Staff roles, lending workflows, and stock adjustment logic.",
-        thumb: null,
+        thumb: "assets/inventaris.png",
         tags: ["Laravel", "PHP", "MySQL"],
+        github: "https://github.com/Molldyapriansyah1/Inventaris",
+        demo: null
+    },
+    {
+        title: "Portfolio ",
+        desc: "A personal portfolio website developed using HTML and CSS, designed to present technical skills, and project work in a structured and accessible format. ",
+        thumb: "assets/porto.png",
+        tags: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/Molldyapriansyah1",
         demo: null
     },
     {
-        title: "Portfolio Site",
-        desc: "This site. Plain HTML/CSS/JS — no framework. Dark tech aesthetic with marquee, telemetry data, and SVG icons throughout.",
-        thumb: null,
-        tags: ["HTML", "CSS", "JavaScript"],
-        github: "https://github.com/Molldyapriansyah1",
+        title: "Unfullfilled Promises",
+        desc: "A 2D narrative-driven game built around the weight of promises left unfinished. Unfulfilled Promise places the player inside a story where choices carry consequence and emotion drives progression.  ",
+        thumb: "assets/game.png",
+        tags: ["Photoshop", "Figma", "Unity"],
+        github: null,
+        demo: null
+    },
+    {
+        title: "Buku Tamu",
+        desc: "A web-based guest management system developed for school environments, designed to record and monitor visitor activity in a structured and organized manner.",
+        thumb: "assets/bukutamu.png",
+        tags: ["Photoshop", "Figma", ],
+        github: null,
+        demo: null
+    },
+    {
+        title: "UI/UX assets",
+        desc: "learn UI/UX game assets by clonning what the teacher give",
+        thumb: "assets/ui.png",
+        tags: ["Photoshop", "Figma", ],
+        github: null,
         demo: null
     },
 ];
